@@ -184,7 +184,7 @@ nav.links a:hover{color:var(--navy)}
 .lname{display:none;font-weight:700;color:#92A1AC;font-size:.92rem;letter-spacing:-.01em}
 
 /* ============================================================ SECTION SHELL */
-.sec{padding:clamp(64px,8vw,110px) 0}
+.sec{padding-top:clamp(64px,8vw,110px);padding-bottom:clamp(64px,8vw,110px)}
 .sec-head{max-width:60ch}
 .sec-head h2{font-size:clamp(2rem,4vw,3.2rem);margin:.45em 0 0}
 .center{text-align:center;margin-left:auto;margin-right:auto}
@@ -314,7 +314,7 @@ form button{justify-self:start;margin-top:4px}
 
 /* FOOTER */
 footer{background:var(--navy);color:var(--paper);margin-top:clamp(40px,5vw,70px)}
-.f-in{padding:clamp(56px,7vw,96px) 0 40px}
+.f-in{padding-top:clamp(56px,7vw,96px);padding-bottom:40px}
 .f-top{display:grid;grid-template-columns:1fr;gap:clamp(34px,5vw,60px);padding-bottom:clamp(40px,5vw,64px);border-bottom:1px solid rgba(255,255,255,.12)}
 @media(min-width:760px){.f-top{grid-template-columns:1.1fr 1.9fr}}
 .f-brand .logo{height:42px;margin-bottom:18px}
@@ -328,7 +328,7 @@ footer{background:var(--navy);color:var(--paper);margin-top:clamp(40px,5vw,70px)
 .office p{color:#9FB1C0;font-size:.9rem;line-height:1.75;margin:0}
 .office a:hover{color:var(--paper)}
 .f-bot{padding-top:30px;display:flex;flex-wrap:wrap;gap:16px 36px;justify-content:space-between;align-items:center}
-.f-bot .social{display:flex;gap:24px}
+.f-bot .social{display:flex;flex-wrap:wrap;gap:14px 24px}
 .f-bot .social a{color:#9FB1C0;font-size:.9rem;font-weight:500}
 .f-bot .social a:hover{color:var(--steel)}
 .f-bot .cp{color:#7E909E;font-size:.85rem}
@@ -361,7 +361,7 @@ footer{background:var(--navy);color:var(--paper);margin-top:clamp(40px,5vw,70px)
 @media(max-width:860px){nav.links{display:none}.bar-cta .btn-ghost{display:none}.menu-btn{display:block}}
 
 /* ---- Useful info / calculators ---- */
-.ui-hero{padding:clamp(40px,6vw,80px) 0 clamp(20px,3vw,40px)}
+.ui-hero{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(20px,3vw,40px)}
 .ui-hero h1{font-size:clamp(2.4rem,5.4vw,4rem)}
 .ui-hero .sub{font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--muted);max-width:50ch;margin:1.1em 0 0}
 .ui-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0}
@@ -373,7 +373,9 @@ footer{background:var(--navy);color:var(--paper);margin-top:clamp(40px,5vw,70px)
 .calc-head p{color:var(--muted);margin:.5em 0 0;max-width:56ch}
 .calc-grid{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,46px);margin-top:30px}
 @media(min-width:820px){.calc-grid{grid-template-columns:1.12fr .88fr;align-items:center}}
-.calc-inputs{display:grid;gap:22px}
+.calc-inputs{display:grid;gap:22px;min-width:0}
+.calc-grid>*,.calc-inputs>*,.ci,.ci-two>*{min-width:0}
+.calc select,.calc input{min-width:0;max-width:100%}
 .ci label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
 .ci-val{font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:11px;font-variant-numeric:tabular-nums}
 .ci-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
